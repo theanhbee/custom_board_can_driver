@@ -1,0 +1,23 @@
+/**:
+  ros__parameters:
+    # ---- adapter CAN ----
+    adapter: "waveshare"        # waveshare (USB-CAN-A, CH340) | socketcan | gs_usb | slcan
+    port: ""                    # "" = tu do Waveshare (/dev/ttyUSB*); socketcan: "can0"
+    baud_serial: 2000000        # baud serial Waveshare
+    # ---- banh ----
+    left_node: 0                # node_id banh trai (axis0 board trai)
+    right_node: 2               # node_id banh phai (axis0 board phai); node 1, 3 = axis1 khong dung
+    invert: "PHAI"              # banh lap nguoc: "" | TRAI | PHAI (giong right_sign: -1 cua odrive_controller)
+    wheel_separation: 0.382     # m, khoang cach 2 banh (tam - tam), do 3/11
+    wheel_diameter: 0.139       # m, banh 5.5 inch
+    vmax: 4.0                   # vong/s toi da moi banh (board vel_limit 5.5)
+    # ---- ROS ----
+    cmd_vel_topic: "cmd_vel"
+    vel_cmd_topic: ""           # topic van toc phu (Twist), "" = tat -> chi nhan cmd_vel
+    cmd_timeout: 0.5            # s khong co cmd_vel -> v = w = 0
+    odom_topic: "wheel_odom"
+    raw_encoder_topic: "raw_encoder"  # encoder tho (JointState: vong, vong/s, chua dao dau); "" = tat
+    odom_frame: "odom"
+    base_frame: "base_link"
+    publish_tf: false           # true -> phat TF odom -> base_link (tat neu da co EKF / odrive_controller phat)
+    status_period: 1.0          # s, log trang thai; 0 = tat

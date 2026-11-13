@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>zltech_can_driver_cpp</name>
+  <version>0.1.0</version>
+  <description>Ban C++ cua zltech_can_driver: driver CAN cho 2 banh vi sai (ODrive v3.6 firmware Can-sync, adapter Waveshare USB-CAN-A): can_bridge /cmd_vel, teleop, calib, clear_errors, drive_test, error_monitor</description>
+  <maintainer email="msvnroboticsteam@gmail.com">msvn robotics</maintainer>
+  <license>TODO: License declaration</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>std_srvs</depend>
+  <depend>tf2_ros</depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <test_depend>ament_cmake_gtest</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

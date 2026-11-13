@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>zltech_can_driver</name>
+  <version>0.1.0</version>
+  <description>Driver CAN cho 2 banh vi sai (ODrive v3.6 firmware Can-sync, adapter Waveshare USB-CAN-A): can_bridge /cmd_vel, teleop, calib, clear_errors, drive_test</description>
+  <maintainer email="msvnroboticsteam@gmail.com">msvn robotics</maintainer>
+  <license>TODO: License declaration</license>
+
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>std_srvs</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <!-- python-can: cai bang pip3 (khong co goi apt cho Humble), xem README -->
+  <exec_depend>python3-serial</exec_depend>
+
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
